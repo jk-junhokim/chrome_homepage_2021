@@ -45,18 +45,16 @@ if(savedUsername === null){ // for first time submission
 
 */
 
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
 
-function onLoginBtnClick(){
+function onLoginSubmit(event){
   const username = loginInput.value;
-  if (username == ""){
-    alert("Please write your name.");
-  } else if(username.length > 15){
-    alert("Your name is too long.");
-  }
-
+  event.preventDefault();
+  console.log(event);
 }
 
-loginButton.addEventListener("click", onLoginBtnClick);
+loginForm.addEventListener("submit", onLoginSubmit);
+// js calls onLoginSubmit function with the default argument "event"
+// "event" contains information about what happened during "submit" 
 
