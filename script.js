@@ -1,3 +1,7 @@
+/*
+
+PRACTICE 1
+
 const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
@@ -39,5 +43,8 @@ if(savedUsername === null){ // for first time submission
   paintGreetings(savedUsername);
 }
 
+*/
 
+const loginInput = loginForm.querySelector("#login-form input");
+const loginButton = loginForm.querySelector("#login-form button")
 
