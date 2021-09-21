@@ -23,19 +23,15 @@ function onLoginSubmit(event){
   paintGreetings(username);
 }
 
-
 function paintGreetings(username){
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-
 loginForm.addEventListener("submit", onLoginSubmit);
 // if and only if you "submit" the browser will automatically play the function
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-
 if(savedUsername === null){ // for first time submission
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
@@ -47,14 +43,60 @@ if(savedUsername === null){ // for first time submission
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden"; //use capitals for constants
+const USERNAME_KEY = "username";
 
 function onLoginSubmit(event){
+  event.preventDefault(); //stops from refreshing the page
+  loginForm.classList.add(HIDDEN_CLASSNAME); //just a game of adding & removing class names
   const username = loginInput.value;
-  event.preventDefault();
-  console.log(event);
+  localStorage.setItem("username", username);
+  greeting.innerText = `Hello  ${username}`; //same code below
+  //greeting.innerText = "Hello " + username;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
 // js calls onLoginSubmit function with the default argument "event"
-// "event" contains information about what happened during "submit" 
+// "event" contains information about what happened during "submit"
+
+function paintGreetings(username){
+  greeting.innerText = `Hello  ${username}`; //we are remembering the user
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY); //gets username from local Storage
+
+/* read code process from here for better understanding*/
+
+if(savedUsername === null){
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+}else{
+  paintGreetings(savedUsername);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* visualizing preventDefault
+const link = document.querySelector("a");
+
+function handleLinkClick(event){
+  event.preventDefault();
+  console.dir(event);
+}
+
+link.addEventListener("click", handleLinkClick);
+*/
+
 
