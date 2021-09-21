@@ -1,5 +1,6 @@
 /*
 
+PLEASE SKIP THIS PART
 PRACTICE 1
 
 const loginForm = document.querySelector("#login-form");
@@ -58,6 +59,7 @@ function onLoginSubmit(event){
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
+/*code executes iff EVENT is executed*/
 loginForm.addEventListener("submit", onLoginSubmit);
 // js calls onLoginSubmit function with the default argument "event"
 // "event" contains information about what happened during "submit"
@@ -69,23 +71,13 @@ function paintGreetings(username){
 
 const savedUsername = localStorage.getItem(USERNAME_KEY); //gets username from local Storage
 
-/* read code process from here for better understanding*/
-
-if(savedUsername === null){
+/*this code executes no matter what as web reads from top to bottom*/
+if(savedUsername === null){ //if there exists a saved username this won't execute
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 }else{
   paintGreetings(savedUsername);
 }
-
-
-
-
-
-
-
-
-
 
 
 /* visualizing preventDefault
