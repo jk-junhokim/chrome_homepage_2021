@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = [];
+let toDos = [];
 
 function saveToDos(){ //this is putting the toDos array in the local storage
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); 
@@ -43,14 +43,15 @@ function handleToDoSubmit(event){
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 function sayHello(){
-  
+
 }
 
-const saveToDos = localStorage.getItem(TODOS_KEY);
+const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if (saveToDos !== null){
-  const parsedToDos = JSON.parse(saveToDos);
+if (savedToDos !== null){
+  const parsedToDos = JSON.parse(savedToDos);
   // parse function makes a string into array that we can actually use
   // arrays are smarter because it allows us to use each item in the array
-  parsedToDos.forEach();
+  toDos = parsedToDos;
+  parsedToDos.forEach(paintToDo);
 }
