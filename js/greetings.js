@@ -54,9 +54,12 @@ function onLoginSubmit(event){
   loginForm.classList.add(HIDDEN_CLASSNAME); //just a game of adding & removing class names
   const username = loginInput.value;
   localStorage.setItem("username", username);
-  greeting.innerText = `Hello  ${username}`; //same code below
+  /*
+  greeting.innerText = `Good Day Master ${username}`; //same code below
   //greeting.innerText = "Hello " + username;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  */
+  paintGreetings(username);
 }
 
 /*code executes iff EVENT is executed*/
@@ -65,7 +68,7 @@ loginForm.addEventListener("submit", onLoginSubmit);
 // "event" contains information about what happened during "submit"
 
 function paintGreetings(username){
-  greeting.innerText = `Hello  ${username}`; //we are remembering the user
+  greeting.innerText = `Good Day Master ${username}`; //we are remembering the user
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -78,7 +81,6 @@ if(savedUsername === null){ //if there exists a saved username this won't execut
 }else{
   paintGreetings(savedUsername);
 }
-
 
 /* visualizing preventDefault
 const link = document.querySelector("a");
