@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
 body {
   background-color: beige;
   font-family: 'Times New Roman', Times, serif;
@@ -30,12 +32,13 @@ img{
   margin: auto;
   left: 0;
   right: 0;
-  top: 160px;
+  top: 140px;
   margin-bottom: 10px;
   color: aliceblue;
   font-size: 70px;
   width: 500px;
   height: 180px;
+  font-family: 'Open Sans Roboto', sans-serif;
 }
 
 #login-form{
@@ -47,8 +50,9 @@ img{
   margin: auto;
   left: 0;
   right: 0;
-  top: 350px;
+  top: 335px;
   margin-bottom: 15px;
+  font-family: 'Open Sans Roboto', sans-serif;
 }
 
 #login-form input:not([type="submit"]){
@@ -69,7 +73,8 @@ img{
   margin: auto;
   left: 0;
   right: 0;
-  top: 350px;
+  top: 335px;
+  font-family: 'Open Sans Roboto', sans-serif;
 }
 
 #todo-form{
@@ -80,7 +85,8 @@ img{
   margin: auto;
   left: 0;
   right: 0;
-  top: 440px;
+  top: 425px;
+  font-family: 'Open Sans Roboto', sans-serif;
 }
 
 #todo-form input{
@@ -92,7 +98,33 @@ img{
 }
 
 #todo-list{
-  
+  height: 400px;
+  width: 600px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  position: fixed;
+  bottom: 20px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+#todo-list li{
+  margin-top: 8px;
+}
+
+#todo-list li span{
+  margin-right: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: mediumblue;
+  font-family: 'Open Sans Roboto', sans-serif;
+}
+
+#todo-list li button{
+  background: none;
+  font-size: 20px;
+  border: none;
 }
 
 #quote{
