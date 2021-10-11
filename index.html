@@ -10,45 +10,58 @@
 
   <body>
 
-    <div class = "clock-center">
-      <h2 id="clock">00:00:00</h2>
-    </div>
+      <!-- 1. logout form top right
+      2. weather top left
+      3. login icon center middle
+      4. clock - date (small fonts)
+      5. clock - time (big fonts)
+      6. todo - undecided
+       https://pjus.github.io/ -->
 
-    <form class="hidden" id="login-form">
-      <input 
-        required
-        maxlength="15"
-        type="text"
-        placeholder="Name Please"
-        />
-      <input type="submit" value="Log In"/ >
-    </form>
+        <div class="logout">
+            <h1>Logout</h1>
+        </div>
 
-    <h1 id="greeting" class="hidden"></h1>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
 
-    <form id="todo-form">
-      <input type="text" placeholder="What's Your Plans for Today?" required />
-    </form>
+        <form class="hidden" id="login-form">
+            <input 
+                required
+                maxlength="15"
+                type="text"
+                placeholder="Name Please"
+            />
+            <input type="submit" value="Log In"/ >
+        </form>
 
-    <ul id="todo-list">
-    </ul>
+        <h1 id="greeting" class="hidden"></h1>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
+        <div id = "clock">
+            <p class="date"></p>
+            <p class="time">00:00:00</p>
+        </div>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+        <form id="todo-form">
+            <input type="text" placeholder="Strong Reasons Make Strong Actions" required />
+        </form>
+
+        <ul id="todo-list">
+        </ul>
+
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
 
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
 
   </body>
 
